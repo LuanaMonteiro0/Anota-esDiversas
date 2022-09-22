@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <script>
+        function Recarregar(){
+            location.reload(true);
+        }
+        function mostrarUmLinha(id, item){
+            let ondeMostra = document.getElementById(id);
+            ondeMostra.innerHTML = item;
+            alert(item)
+        }
+    //os scripts dos respectivos exercícios estão junto com os respectivos enunciados
+    </script>
+</head>
+<body>
+    <h1>Revisão</h1>
+    <hr><hr>
+    <h2>Exercício 04</h2>
+    <p id='p1'></p>
+    <p id='p2'></p>
+    <button onclick="RespRev04()">Resultado</button>
+    <script>
+        function RespRev04() {
+            let objetosCarros = [
+                { placa:'ABC-3Y67',
+                  marca: 'Ferrari',
+                  modelo: 'F8'
+                },
+                { placa:'TKI-2P12',
+                  marca: 'Porsche',
+                  modelo: 'Cayman'
+                }
+                ];
+            let stringJson = JSON.stringify(objetosCarros);
+            let ondeMostra1 = document.getElementById('p1');
+            ondeMostra1.innerHTML = stringJson;
+            let str = "";
+            for (let i = 0; i < objetosCarros.length; i++) {
+                str = str + " " + objetosCarros[i].marca + " " + objetosCarros[i].modelo + " " + objetosCarros[i].placa;
+            }
+            mostrarUmLinha('p2', str);        
+        }
+    </script>
+    <hr><hr>
+    <h2>Exercício 05</h2>
+    <p id='p1'></p>
+    <p id='p2'></p>
+    <button onclick="RespRev05()">Resultado</button>
+    <script>
+        function RespRev05(){
+
+        }
+    </script>
+</body>
+</html>
